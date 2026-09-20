@@ -2,128 +2,141 @@
 
 <html>
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>瀰希小家</title>
+        <title>瀰希小家</title>
 
-    <link rel="icon" href="image/logo.jpg">
+        <link rel="icon" href="image/logo.jpg">
 
-    <style>
+        <style>
 
-        /* 背景設置 */        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+            /* 背景設置 */        
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        body {
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            background: black;
-        }
+            body {
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+                background: black;
+            }
 
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
+            .background {
+                position: fixed;
+                top: 0;
+                left: 0;
 
-            width: 100%;
-            height: 100vh;
+                width: 100%;
+                height: 100vh;
 
-            object-fit: cover;
+                object-fit: cover;
 
-            z-index: 0;
-        }
+                z-index: 0;
 
-        /* 白色淡化遮罩 */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
+                animation: backgroundFadeIn 3s ease-out;
+            }
 
-            width: 100%;
-            height: 100vh;
+            /* 白色淡化遮罩 */
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
 
-            background: white;
-            opacity: 0.35;
+                width: 100%;
+                height: 100vh;
 
-            z-index: 1;
-        }
+                background: white;
+                opacity: 0.35;
 
-
-         /* 網頁內容設置 */  
-        .content {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* discord連結按鈕裝飾 */
-        .discord-button {
-            display: inline-block;
-
-            padding: 12px 24px;
-
-            background: #5865F2;
-            color: white;
-
-            text-decoration: none;
-
-            border-radius: 10px;
-
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        /* discord連結按鈕回應(滑鼠放上去會變色) */
-        .discord-button:hover {
-            background: #4752C4;
-        }
-
-        /* discord連結按鈕回應(滑鼠點擊後會變小一點) */
-        .discord-button:active {
-            transform: scale(0.95);
-        }
-
-    </style>
-    
-
-</head>
-
-<body>
-
-    <!--背景-->
-    <video class="background" autoplay muted loop playsinline>
-
-        <source src="image/background.webm" type="video/webm">
-
-    </video>
-
-    <!-- 背景白色淡化 -->
-    <div class="overlay"></div>
-    
-    <!--網站內容-->
-    <div class="content">
-
-        <h1>你好！我是瀰希</h1>
-
-        <p>歡迎來到我的網站</p>
-
-        <!--Discord 藍光宿舍 邀請連結-->
-        <a class="discord-button" href="https://discord.gg/zGeQgA77SK" target="_blank">
-
-        加入我的 Discord
-
-        </a>
-
-    </div>
+                z-index: 1;
+            }
 
 
-</body>
+            /* 網頁內容設置 */  
+            .content {
+                position: relative;
+                z-index: 2;
+            }
+
+            /* discord連結按鈕裝飾 */
+            .discord-button {
+                display: inline-block;
+
+                padding: 12px 24px;
+
+                background: #5865F2;
+                color: white;
+
+                text-decoration: none;
+
+                border-radius: 10px;
+
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            /* discord連結按鈕回應(滑鼠放上去會變色) */
+            .discord-button:hover {
+                background: #4752C4;
+            }
+
+            /* discord連結按鈕回應(滑鼠點擊後會變小一點) */
+            .discord-button:active {
+                transform: scale(0.95);
+            }
+
+            /* 背景入場慢慢浮現 */
+            @keyframes backgroundFadeIn {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+
+        </style>
+        
+
+    </head>
+
+    <body>
+
+        <!--背景-->
+        <video class="background" autoplay muted loop playsinline>
+
+            <source src="image/background.webm" type="video/webm">
+
+        </video>
+
+        <!-- 背景白色淡化 -->
+        <div class="overlay"></div>
+        
+        <!--網站內容-->
+        <div class="content">
+
+            <h1>你好！我是瀰希</h1>
+
+            <p>歡迎來到我的網站</p>
+
+            <!--Discord 藍光宿舍 邀請連結-->
+            <a class="discord-button" href="https://discord.gg/zGeQgA77SK" target="_blank">
+
+            加入我的 Discord
+
+            </a>
+
+        </div>
+
+
+    </body>
 
 </html>
